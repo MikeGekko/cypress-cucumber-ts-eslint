@@ -1,5 +1,5 @@
-const report = require("multiple-cucumber-html-reporter");
-report.generate({
+import { generate } from "multiple-cucumber-html-reporter";
+generate({
   jsonDir: "jsonlogs",
   reportPath: "./reports/cucumber-htmlreport.html",
   metadata: {
