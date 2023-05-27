@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "test": "npm run cypress:run || npm run report:generate",
+    "cypress:run": "cypress run --browser chrome --spec cypress/e2e/features/*",
+    "report:generate": "node ./cucumber-html-report.js",
+    "report:clear": "rimraf --glob ./reports && rimraf --glob ./jsonlogs"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "cypress": "^12.0.2",
+    "esbuild": "^0.16.4",
+    "multiple-cucumber-html-reporter": "^3.0.1",
+    "typescript": "^5.0.4"
+  }
+}
