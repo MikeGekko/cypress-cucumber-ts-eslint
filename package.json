@@ -3,7 +3,7 @@
     "test": "npm run cypress:run || npm run report:generate",
     "cypress:run": "cypress run --browser chrome --spec cypress/e2e/features/*",
     "report:generate": "node ./cucumber-html-report.js",
-    "report:clear": "rimraf --glob ./reports && rimraf --glob ./jsonlogs"
+    "report:clear": "rimraf --glob ./reports && rimraf --glob ./jsonlogs && rimraf --glob ./cypress/screenshots"
   },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
