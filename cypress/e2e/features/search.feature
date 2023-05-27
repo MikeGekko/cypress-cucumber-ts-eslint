@@ -7,3 +7,6 @@ Feature: Search
     Scenario: Success searching
         When I search for "Phoebe Zipper Sweatshirt"
         Then I verify search result "Phoebe Zipper Sweatshirt"
+
+    Scenario: Success stubed searching
+        Then I verify stubed search result

@@ -2,7 +2,6 @@
 import { loginPage } from "@pages/login.page";
 import { homePage } from "@pages/home.page";
 
-export {};
 declare global {
   namespace Cypress {
     interface Chainable {
