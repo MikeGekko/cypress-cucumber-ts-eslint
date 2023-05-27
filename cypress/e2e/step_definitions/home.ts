@@ -29,11 +29,11 @@ Then("I verify search result {string}", (value: string) => {
 });
 
 Then("I verify stubed search result", () => {
-  cy.intercept("GET", "/search/ajax/suggest/**", { statusCode: 404 }).as(
+  cy.intercept("GET", "/search/ajax/suggest/**", { statusCode: 201 }).as(
     "stab"
   );
   cy.search("12345");
   cy.wait("@stab").then((stab) => {
-    expect(stab.response?.statusCode).to.eq(404);
+    expect(stab.response?.statusCode).to.eq(201);
   });
 });
